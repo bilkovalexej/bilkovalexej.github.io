@@ -71,14 +71,16 @@
     nav a {
       display: grid;
       place-items: center;
-      min-height: 3rem;
-      padding: .625rem .875rem;
-      border: 1px solid #c5d7d0;
-      border-radius: .875rem;
-      color: #174b41;
-      font-weight: 600;
+      min-height: 3.25rem;
+      padding: .75rem 1rem;
+      border: 1px solid #a4bdb4;
+      border-radius: 999px;
+      color: #256b61;
+      font: 600 .875rem/1.25rem system-ui, sans-serif;
       text-decoration: none;
       overflow-wrap: anywhere;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color 120ms ease, transform 120ms ease;
     }
 
     nav a:hover { background: #eff6f2; }
@@ -89,7 +91,19 @@
       color: #fff;
     }
 
-    nav .primary:hover { background: #1c554d; }
+    nav .primary:hover { background: #2f756b; }
+
+    nav a:active {
+      transform: scale(.96);
+      background: #e5eeeb;
+    }
+
+    nav .primary:active { background: #3f7d74; }
+
+    @media (prefers-reduced-motion: reduce) {
+      nav a { transition: none; }
+      nav a:active { transform: none; }
+    }
 
     nav a:focus-visible {
       outline: 2px solid #256b61;
@@ -102,7 +116,7 @@
     <img class="owl" src="sovi-owl.webp" width="540" height="540" alt="" fetchpriority="high">
     <h1>Сови — играем с числами</h1>
     <p>Игра для детей, которые учатся считать, складывать и вычитать.</p>
-    <nav aria-label="Поддержка и документы">
+    <nav aria-label="Скачать, поддержка и документы">
       <a class="primary" href="https://www.rustore.ru/catalog/app/ru.scitayka.app">Скачать в RuStore</a>
       <a href="https://vk.ru/sovi_game">Сообщество и поддержка ВКонтакте</a>
       <a href="https://vk.ru/@sovi_game-privacy-policy">Политика конфиденциальности</a>

@@ -3,24 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f2">
   <title>Сови — играем с числами</title>
   <style>
-    body { margin: 0; background: #faf8f2; color: #174b41; font: 1.125rem/1.6 system-ui, sans-serif; }
-    main { max-width: 36rem; margin: 4rem auto; padding: 0 1.25rem; }
-    .owl { display: block; width: 9rem; max-width: 40%; height: auto; margin-bottom: 1rem; }
-    h1 { line-height: 1.2; }
-    a { color: #256b61; text-underline-offset: .18em; }
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: clamp(1rem, 4vw, 3rem);
+      background: #faf8f2;
+      color: #174b41;
+      font: 1rem/1.55 system-ui, sans-serif;
+    }
+
+    main {
+      width: min(100%, 38rem);
+      display: grid;
+      justify-items: center;
+      padding: clamp(1.5rem, 6vw, 3rem) clamp(1rem, 5vw, 2.5rem);
+      border: 1px solid #dce5e2;
+      border-radius: clamp(1.25rem, 4vw, 2rem);
+      background: #fff;
+      text-align: center;
+    }
+
+    .owl {
+      display: block;
+      width: clamp(7rem, 29vw, 10rem);
+      max-width: 100%;
+      height: auto;
+      margin-bottom: .75rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 5vw, 2.5rem);
+      line-height: 1.15;
+      text-wrap: balance;
+    }
+
+    p {
+      max-width: 30rem;
+      margin: .875rem 0 0;
+      color: #476a62;
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      text-wrap: balance;
+    }
+
+    nav {
+      display: grid;
+      gap: .625rem;
+      width: min(100%, 24rem);
+      margin-top: 1.5rem;
+    }
+
+    nav a {
+      display: grid;
+      place-items: center;
+      min-height: 3rem;
+      padding: .625rem .875rem;
+      border: 1px solid #c5d7d0;
+      border-radius: .875rem;
+      color: #174b41;
+      font-weight: 600;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    nav a:hover { background: #eff6f2; }
+
+    nav .primary {
+      border-color: #256b61;
+      background: #256b61;
+      color: #fff;
+    }
+
+    nav .primary:hover { background: #1c554d; }
+
+    nav a:focus-visible {
+      outline: 2px solid #256b61;
+      outline-offset: 3px;
+    }
   </style>
 </head>
 <body>
   <main>
-    <img class="owl" src="sovi-owl.webp" alt="Совёнок Сови" fetchpriority="high">
+    <img class="owl" src="sovi-owl.webp" width="540" height="540" alt="" fetchpriority="high">
     <h1>Сови — играем с числами</h1>
     <p>Игра для детей, которые учатся считать, складывать и вычитать.</p>
-    <ul>
-      <li><a href="https://vk.ru/sovi_game">Сообщество и поддержка ВКонтакте</a></li>
-      <li><a href="https://vk.ru/@sovi_game-privacy-policy">Политика конфиденциальности</a></li>
-    </ul>
+    <nav aria-label="Поддержка и документы">
+      <a class="primary" href="https://vk.ru/sovi_game">Сообщество и поддержка ВКонтакте</a>
+      <a href="https://vk.ru/@sovi_game-privacy-policy">Политика конфиденциальности</a>
+    </nav>
   </main>
 </body>
 </html>

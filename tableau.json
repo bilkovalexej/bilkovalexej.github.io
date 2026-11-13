@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "api_version": 1,
+  "layout": {
+    "logo": "https://bilkovalexej.github.io/sovi-tableau.png",
+    "color": "#faf8f2",
+    "show_title": false
+  }
+}

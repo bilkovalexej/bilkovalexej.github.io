@@ -1,0 +1,22 @@
+{
+  "name": "Сови — играем с числами",
+  "short_name": "Сови",
+  "lang": "ru",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#faf8f2",
+  "background_color": "#faf8f2",
+  "icons": [
+    {
+      "src": "/sovi-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/sovi-icon-512.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
